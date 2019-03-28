@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jt809.mapper.LocationMapper">
+    <select id="selectLocationByID" parameterType="java.lang.String"
+            resultType="com.jt809.pojo.LocationBean">
+        select
+        *
+    from jsjk_location
+        where SimNumber = #{simNumber,jdbcType=VARCHAR}
+        order by LocationTime asc
+    </select>
+</mapper>
